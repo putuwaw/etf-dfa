@@ -2,4 +2,23 @@
     {% block title %} Index {% endblock %}
 {% block body %}
     <h1 class="text-primary">Hello, World!</h1>
+    <form class="mt-5 pt-4">
+        <div class="mb-3">
+            <label for="InputText" class="form-label">Masukan String</label>
+            <input type="text" class="form-control" id="InputText" aria-describedby="Text" required />
+            <div id="InputText" class="form-text">Masukan String berupa kombinasi 0 & 1, Contoh 1001,0101</div>
+        </div>
+        
+        <div class="mb-3">
+             <select class="form-select" required aria-label="select example">
+                <option value="">Silahkan Pilih Bahasa</option>
+                <option value="1">Bahasa-1</option>
+                <option value="2">Bahasa-2</option>
+                <option value="3">Bahasa-3</option>
+             </select>
+             <div class="invalid-feedback">Example invalid select feedback</div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Cek String</button>
+  </form>
 {% endblock %}
