@@ -1,1 +1,6 @@
-/* styles.css */
+/* CSS reset for ul dan li */
+ul,
+li {
+  list-style: none;
+  padding: 0 !important;
+}
