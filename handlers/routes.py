@@ -1,5 +1,5 @@
 from flask import render_template, request
-from modules import languageL1
+from modules import languageL1, languageL2
 
 
 def configure_routes(app):
@@ -19,8 +19,18 @@ def configure_routes(app):
                     'string': string,
                     'language': language
                 }
-                # elif (language == "L2"):
-                # elif (language == "L3"):
+            elif (language == "L2"):
+                isAccepted = languageL2.get_is_accepted(string)
+                detailProcess = languageL2.get_detail_process(string)
+                isSend = True
+                templateData = {
+                    'isSend': isSend,
+                    'isAccepted': isAccepted,
+                    'detailProcess': detailProcess,
+                    'string': string,
+                    'language': language
+                }
+            # elif (language == "L3"):
             return render_template('index.html', **templateData)
         else:
             return render_template('index.html')

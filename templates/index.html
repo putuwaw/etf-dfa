@@ -1,61 +1,62 @@
 {% extends 'base.html' %}
-    {% block title %} Index {% endblock %}
+{% block title %} Index {% endblock %}
 {% block body %}
-    <main>
-        <!-- Form untuk melakukan pengecekan string -->
-        <form action="/" method="post" class="mt-5 pt-4" onsubmit="return validate_form()">
-            <div class="mb-3">
-                <label for="string" class="form-label">String</label>
-                <input name="string" type="text" class="form-control" id="string" required />
-                <div id="string" class="form-text">Masukan string berupa kombinasi 0 dan 1. Contoh: 1001, 0101</div>
-            </div>
-            <div class="mb-3">
-                <label for="language" class="form-label">Bahasa</label>
-                <select id="language" name="language" class="form-select" required>
-                    <option selected disabled value="">Silakan Pilih Bahasa</option>
-                    <option value="L1">Bahasa L1 (diawali dan diakhiri dengan simbol yang sama)</option>
-                    <option disabled value="L2">Bahasa L2 (diawali simbol 1 dan jumlah simbol 0 adalah kelipatan 3)</option>
-                    <option disabled value="L3">Bahasa L3 (diawali simbol 0 dan jumlah simbol 1 adalah ganjil)</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Cek String</button>
-        </form>
-        <!-- Section hasil dari pengecekan string -->
-        <section class="mt-3">
-            {% if isSend %}
-                <hr>
-                <h1 class="lead">Hasil</h1>
-                {% if isAccepted %}
-                    <div>
-                        <button class="btn btn-success">String diterima</button>
-                    </div>
-                {% else %}
-                    <div>
-                        <button class="btn btn-danger">String ditolak</button>
-                    </div>
-                {% endif %}
-    
-                {% if language == "L1" %}
-                    <img
-                        class="img-fluid"
-                        src="{{ url_for('static', filename='images/languageL1.png') }}"
-                        alt="Transition Diagram for Language 1"
-                    >
-                {% endif %}
-    
-                <h1 class="lead mt-3">Masukan: {{string}}</h1>
-    
-                <div class="mt-3">
-                    <h3 class="lead">Langkah-Langkah:</h3>
-                    <ul>
-                        {%- for process in detailProcess -%}
-                        <li>
-                            {{ process }}
-                        </li>
-                        {%- endfor -%}
-                    </ul>
-                </div>
-            {% endif %}
-        </section>
-    </main>
+<main>
+    <!-- Form untuk melakukan pengecekan string -->
+    <form action="/" method="post" class="mt-5 pt-4" onsubmit="return validate_form()">
+        <div class="mb-3">
+            <label for="string" class="form-label">String</label>
+            <input name="string" type="text" class="form-control" id="string" required />
+            <div id="string" class="form-text">Masukan string berupa kombinasi 0 dan 1. Contoh: 1001, 0101</div>
+        </div>
+        <div class="mb-3">
+            <label for="language" class="form-label">Bahasa</label>
+            <select id="language" name="language" class="form-select" required>
+                <option selected disabled value="">Silakan Pilih Bahasa</option>
+                <option value="L1">Bahasa L1 (diawali dan diakhiri dengan simbol yang sama)</option>
+                <option value="L2">Bahasa L2 (diawali simbol 1 dan jumlah simbol 0 adalah kelipatan 3)</option>
+                <option disabled value="L3">Bahasa L3 (diawali simbol 0 dan jumlah simbol 1 adalah ganjil)</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Cek String</button>
+    </form>
+    <!-- Section hasil dari pengecekan string -->
+    <section class="mt-3">
+        {% if isSend %}
+        <hr>
+        <h1 class="lead">Hasil</h1>
+        {% if isAccepted %}
+        <div>
+            <button class="btn btn-success">String diterima</button>
+        </div>
+        {% else %}
+        <div>
+            <button class="btn btn-danger">String ditolak</button>
+        </div>
+        {% endif %}
+
+        {% if language == "L1" %}
+        <img class="img-fluid" src="{{ url_for('static', filename='images/languageL1.png') }}"
+            alt="Transition Diagram for Language L1">
+        {% endif %}
+        {% if language == "L2" %}
+        <img class="img-fluid" src="{{ url_for('static', filename='images/languageL2.png') }}"
+            alt="Transition Diagram for Language L2">
+        {% endif %}
+
+        <h1 class="lead mt-3">Masukan: {{string}}</h1>
+
+        <div class="mt-3">
+            <h3 class="lead">Langkah-Langkah:</h3>
+            <ul>
+                {%- for process in detailProcess -%}
+                <li>
+                    {{ process }}
+                </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+        {% endif %}
+    </section>
+</main>
 {% endblock %}
