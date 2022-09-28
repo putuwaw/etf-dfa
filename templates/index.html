@@ -15,7 +15,7 @@
                 <option selected disabled value="">Silakan Pilih Bahasa</option>
                 <option value="L1">Bahasa L1 (diawali dan diakhiri dengan simbol yang sama)</option>
                 <option value="L2">Bahasa L2 (diawali simbol 1 dan jumlah simbol 0 adalah kelipatan 3)</option>
-                <option disabled value="L3">Bahasa L3 (diawali simbol 0 dan jumlah simbol 1 adalah ganjil)</option>
+                <option value="L3">Bahasa L3 (diawali simbol 0 dan jumlah simbol 1 adalah ganjil)</option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Cek String</button>
@@ -41,6 +41,10 @@
         {% endif %}
         {% if language == "L2" %}
         <img class="img-fluid" src="{{ url_for('static', filename='images/languageL2.png') }}"
+            alt="Transition Diagram for Language L2">
+        {% endif %}
+        {% if language == "L3" %}
+        <img class="img-fluid" src="{{ url_for('static', filename='images/languageL3.png') }}"
             alt="Transition Diagram for Language L2">
         {% endif %}
 
