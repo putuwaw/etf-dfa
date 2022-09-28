@@ -4,3 +4,25 @@ li {
   list-style: none;
   padding: 0 !important;
 }
+
+.jumbotron {
+  padding-top: 7rem;
+  background-color: #e2edff;
+}
+
+#Profil {
+  background-color: white;
+}
+
+#Profil {
+  padding-top: 5rem;
+}
+
+#Proyek {
+  background-color: #e2edff;
+  padding-top: 5rem;
+}
+
+.footer {
+  padding: auto;
+}
