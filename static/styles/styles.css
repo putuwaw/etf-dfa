@@ -26,3 +26,10 @@ li {
 .footer {
   padding: auto;
 }
+
+/* media query for responsive font size */
+@media screen and (max-width: 768px) {
+    #desc{
+      font-size: 1rem !important;
+    }
+  }
