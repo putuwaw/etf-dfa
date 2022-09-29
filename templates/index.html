@@ -1,196 +1,219 @@
 {% extends 'base.html' %}
-{% block title %} Index {% endblock %}
+{% block title %} ETF - DFA {% endblock %}
 {% block body %}
-<main>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">Kelompok-5 </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Navbar -->
+<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">ETF-DFA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Profil">Profil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Proyek">Proyek</a>
-              </li>            
-              <li class="nav-item">
-                <a class="nav-link" href="#Source Code">Souce Code</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- Akhir Navbar -->
-  
-      <!-- Jumbotroon -->
-      <section class="jumbotron text-center">
-        <img src="{{ url_for('static', filename='images/dfa example.png') }}" alt="Kevin Moses" width="200" class="rounded-circle img-thumbnail" />
-        <h1 class="display-4">Extension of the Transition Function for DFA</h1>
-        <p class="lead">Teori Bahasa & Otomata</p>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#fff"
-            fill-opacity="10"
-            d="M0,224L26.7,213.3C53.3,203,107,181,160,154.7C213.3,128,267,96,320,112C373.3,128,427,192,480,197.3C533.3,203,587,149,640,133.3C693.3,117,747,139,800,160C853.3,181,907,203,960,176C1013.3,149,1067,75,1120,64C1173.3,53,1227,107,1280,144C1333.3,181,1387,203,1413,213.3L1440,224L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
-      <!-- Akhir Jumbotroon -->
-  
-      <!-- About Us -->
-      <section id="Profil">
-        <div class="container">
-            <div class="row text-center mb-4" >
-                <div class="col">
-                    <h2>Profil Kelompok</h2>
-                </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" >
-                <div class="col mb-3">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/Ata.jpg') }}" class="card-img-top" alt="Projects 1">
-                        <div class="card-body">
-                          <p class="card-text text-center">Antonius Ata - 2108561080</p>
-                        </div>
-                      </div>                    
-                </div>
-                <div class="col mb-3">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/Yoga.jpg') }}" class="card-img-top" alt="Projects 1">
-                        <div class="card-body">
-                          <p class="card-text text-center">I Putu Yoga Laksana Putra - 2108561120</p>
-                        </div>
-                      </div>                    
-                </div>
-                <div class="col mb-3">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/Widyantara.jpg') }}" class="card-img-down" alt="Projects 1">
-                        <div class="card-body">
-                          <p class="card-text text-center">Putu Widyantara Artanta Wibawa - 2108561005</p>
-                        </div>
-                      </div>                    
-                </div>
-                <div class="col mb-3">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/Kevin.jpg') }}" class="card-img-top" alt="Projects 1">
-                        <div class="card-body">
-                          <p class="card-text text-center">Kevin Moses Waleleng - 2108561100</p>
-                        </div>
-                      </div>                    
-                </div>
-            </div>
-        </div>      
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e2edff" fill-opacity="1" d="M0,224L48,197.3C96,171,192,117,288,112C384,107,480,149,576,165.3C672,181,768,171,864,144C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        <section>
-      <!-- Akhir About -->
-  
-      <!-- About -->
-      <section id="Proyek">
-        <div class="container">
-          <div class="row text-center mb-3">
-            <div class="col">
-              <h2>Pengenalan Singkat DFA</h2>
-            </div>
-          </div>
-          <div class="row justify-content-center fs-5 text-justify-content-between w-200">
-            <div class="col-md-4">
-              <p>Deterministic Finite Automaton disingkat menjadi “DFA” dan juga biasa dikenal sebagai Deterministic Finite Acceptor (DFA), Deterministic Finite State Machine (DFSM), atau Deterministic Finite State Automaton (DFSA). DFA merupakan teori komputasi dan cabang dari ilmu komputer teoritis.  </p>
-            </div>
-            <div class="col-md-4">
-              <p>DFA adalah Finite-state Machine atau mesin keadaan terbatas yang menerima atau menolak string dari simbol dan hanya menghasilkan perhitungan unik dari otomata untuk setiap string yang di masukan. Otomata berhingga deterministic atau DFA (Deterministic Finite Automata) adalah FSA(finite state automata) yang memiliki stata penerima tepat satu stata untuk setiap simbol masukan.</p>
-            </div>
-          </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#ffffff"
-            fill-opacity="10"
-            d="M0,64L60,64C120,64,240,64,360,85.3C480,107,600,149,720,176C840,203,960,213,1080,197.3C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
-      <!-- Akhir About -->
-  
-      <!-- Project String & Form DFA -->
-              <!-- Form untuk melakukan pengecekan string -->
-    <form action="/" method="post" class="mt-5 pt-4" onsubmit="return validate_form()">
-        <div class="mb-3">
-            <label for="string" class="form-label">String</label>
-            <input name="string" type="text" class="form-control" id="string" required />
-            <div id="string" class="form-text">Masukan string berupa kombinasi 0 dan 1. Contoh: 1001, 0101</div>
-        </div>
-        <div class="mb-3">
-            <label for="language" class="form-label">Bahasa</label>
-            <select id="language" name="language" class="form-select" required>
-                <option selected disabled value="">Silakan Pilih Bahasa</option>
-                <option value="L1">Bahasa L1 (diawali dan diakhiri dengan simbol yang sama)</option>
-                <option value="L2">Bahasa L2 (diawali simbol 1 dan jumlah simbol 0 adalah kelipatan 3)</option>
-                <option value="L3">Bahasa L3 (diawali simbol 0 dan jumlah simbol 1 adalah ganjil)</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Cek String</button>
-    </form>
-    <!-- Section hasil dari pengecekan string -->
-    <section class="mt-3 text-start mb-4">
-        {% if isSend %}
-        <hr>
-        <h1 class="lead">Hasil</h1>
-        {% if isAccepted %}
-        <div>
-            <button class="btn btn-success">String diterima</button>
-        </div>
-        {% else %}
-        <div>
-            <button class="btn btn-danger">String ditolak</button>
-        </div>
-        {% endif %}
-
-        {% if language == "L1" %}
-        <img class="img-fluid" src="{{ url_for('static', filename='images/languageL1.png') }}"
-            alt="Transition Diagram for Language L1">
-        {% endif %}
-        {% if language == "L2" %}
-        <img class="img-fluid" src="{{ url_for('static', filename='images/languageL2.png') }}"
-            alt="Transition Diagram for Language L2">
-        {% endif %}
-        {% if language == "L3" %}
-        <img class="img-fluid" src="{{ url_for('static', filename='images/languageL3.png') }}"
-            alt="Transition Diagram for Language L2">
-        {% endif %}
-
-        <h1 class="lead mt-3">Masukan: {{string}}</h1>
-
-        <div class="mt-3">
-            <h3 class="lead">Langkah-Langkah:</h3>
-            <ul>
-                {%- for process in detailProcess -%}
-                <li>
-                    {{ process }}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Beranda</a>
                 </li>
-                {%- endfor -%}
+                <li class="nav-item">
+                    <a class="nav-link" href="#Profil">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Proyek">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#app">Aplikasi</a>
+                </li>
             </ul>
         </div>
+    </div>
+</nav>
+<!-- Akhir Navbar -->
+<main>
+    <!-- Jumbotroon -->
+    <section class="jumbotron text-center">
+        <img src="{{ url_for('static', filename='images/dfa example.png') }}" alt="Hero" width="200"
+            class="rounded-circle img-thumbnail" />
+        <h1 class="display-6 fw-semibold pt-4 container-xl">Implementasi DFA dengan ETF</h1>
+        <p class="lead pt-3 container-xl">Teori Bahasa & Otomata</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="10"
+                d="M0,224L26.7,213.3C53.3,203,107,181,160,154.7C213.3,128,267,96,320,112C373.3,128,427,192,
+                480,197.3C533.3,203,587,149,640,133.3C693.3,117,747,139,800,160C853.3,181,907,203,960,
+                176C1013.3,149,1067,75,1120,64C1173.3,53,1227,107,1280,144C1333.3,181,1387,203,1413,
+                213.3L1440,224L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,
+                320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,
+                320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Akhir Jumbotroon -->
+    <!-- About Us -->
+    <section id="Profil">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="display-6 fw-semibold">Profil Kelompok 5</h2>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/Ata.jpg') }}" class="img-fluid"
+                            alt="Projects 1">
+                        <div class="card-body">
+                            <p class="card-text text-center">Antonius Ata<br>2108561080</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/Yoga.jpg') }}" class="img-fluid"
+                            alt="Projects 1">
+                        <div class="card-body">
+                            <p class="card-text text-center">I Putu Yoga Laksana Putra<br> 2108561120</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/Widyantara.jpg') }}" class="img-fluid"
+                            alt="Projects 1">
+                        <div class="card-body">
+                            <p class="card-text text-center">Putu Widyantara Artanta W.<br> 2108561005</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/Kevin.jpg') }}" class="img-fluid"
+                            alt="Projects 1">
+                        <div class="card-body">
+                            <p class="card-text text-center">Kevin Moses Waleleng<br> 2108561100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#e2edff" fill-opacity="1"
+                d="M0,224L48,197.3C96,171,192,117,288,112C384,107,480,149,576,165.3C672,181,768,171,864,
+                144C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,
+                1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,
+                320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Akhir About -->
+    <!-- About -->
+    <section id="Proyek">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col">
+                    <h2 class="display-6 fw-semibold">Tentang Aplikasi</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center fs-5 w-200">
+                <div class="col-md-8">
+                    <p id="desc" class="lead text-center">ETF-DFA adalah sebuah aplikasi berbasis website yang mengimplementasikan
+                        DFA (Deterministic Finite Automata) dengan ETF (Extension of the Transition Function), sehingga
+                        mampu untuk mengenali apakah sebuah string diterima atau tidak.
+                        Aplikasi ini dibuat untuk memenuhi tugas mata kuliah Teori Bahasa & Otomata. Pembuatan aplikasi ini menggunakan
+                        Python sebagai bahasa pemrograman utama, Flask sebagai web framewok, Bootstrap CSS, dan Heroku sebagai web hosting.</p>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="10"
+                d="M0,64L60,64C120,64,240,64,360,85.3C480,107,600,149,720,176C840,203,960,213,1080,197.3C1200,
+                181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,
+                720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Akhir About -->
+    <!-- Project String & Form DFA -->
+    <section id="app" class="pt-2 mb-5">
+        <form action="#result" method="post" class="mt-5 pt-4 container-xl" onsubmit="return validate_form()">
+            <h2 class="text-center display-6 fw-semibold">Aplikasi</h2>
+            <div class="mb-3 mt-4">
+                <label for="string" class="form-label">String</label>
+                <input name="string" type="text" class="form-control" id="string" required  autocomplete="off"/>
+                <div id="string" class="form-text">Masukkan string berupa kombinasi 0 dan 1. Contoh: 1001, 0101</div>
+            </div>
+            <div class="mb-3">
+                <label for="language" class="form-label">Bahasa</label>
+                <select id="language" name="language" class="form-select" required>
+                    <option selected disabled value="">Silakan Pilih Bahasa</option>
+                    <option value="L1">Bahasa L1 (diawali dan diakhiri dengan simbol yang sama)</option>
+                    <option value="L2">Bahasa L2 (diawali simbol 1 dan jumlah simbol 0 adalah kelipatan 3)</option>
+                    <option value="L3">Bahasa L3 (diawali simbol 0 dan jumlah simbol 1 adalah ganjil)</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Cek String</button>
+        </form>
+    </section>
+    <!-- Section hasil dari pengecekan string -->
+    <section id="result" class="mt-5 pt-5 pb-4 container-xl">
+        {% if isSend %}
+            <hr>
+            {% if isAccepted %}
+                <h5 class="">Hasil: <button class="btn btn-success">String diterima</button> </h5>
+            {% else %}
+                <h5 class="">Hasil: <button class="btn btn-danger">String ditolak</button> </h5>
+            {% endif %}
+            <h5 class=" mt-3">Masukan: <span class="lead"> {{string}} </span> </h5>
+            {% if language == "L1" %}
+                <h5 class=""> Bahasa: <span class="lead">L1</span> </h5>
+                <h5 class="">Diagram Transisi DFA untuk L1:</h5>
+                <img class="img-fluid" src="{{ url_for('static', filename='images/languageL1.png') }}"
+                alt="Transition Diagram for Language L1">
+            {% endif %}
+            {% if language == "L2" %}
+                <h5 class=""> Bahasa: <span class="lead">L2</span> </h5>
+                <h5 class="">Diagram Transisi DFA untuk L2:</h5>
+                <img class="img-fluid" src="{{ url_for('static', filename='images/languageL2.png') }}"
+                alt="Transition Diagram for Language L2">
+            {% endif %}
+            {% if language == "L3" %}
+                <h5 class=""> Bahasa: <span class="lead">L3</span> </h5>
+                <h5 class="">Diagram Transisi DFA untuk L3:</h5>
+                <img class="img-fluid" src="{{ url_for('static', filename='images/languageL3.png') }}"
+                    alt="Transition Diagram for Language L3">
+            {% endif %}
+            <div class="mt-3">
+                <h5 class="">Langkah-Langkah:</h5>
+                <ul>
+                    {%- for process in detailProcess -%}
+                    <li>
+                        <span class="lead"> {{ process }} </span> 
+                    </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
         {% endif %}
     </section>
-      <!-- Akhir Project String & Form DFA -->
-  
-      <!-- footer -->
-      <section id="Source Code"></section>
-      <footer class="bg-primary text-white text-center pb-1">
-        <p>Source Code: 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-          </svg>
-          <a href="https://github.com/putuwaw/etf-dfa"class="text-white fw-bold">  Kelompok-5</a></p>
-      </footer>
-      <!-- Akhir Footer -->
-    
+    <!-- Akhir Project String & Form DFA -->
 </main>
+<!-- Footer -->
+<footer class="container-fluid bg-primary text-white">
+    <ul class=" container nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Beranda</a></li>
+        <li class="nav-item"><a href="#Profil" class="nav-link px-2 text-white">Profil</a></li>
+        <li class="nav-item"><a href="#Proyek" class="nav-link px-2 text-white">Tentang</a></li>
+        <li class="nav-item"><a href="#app" class="nav-link px-2 text-white">Aplikasi</a></li>
+    </ul>
+    <div class="text-center pb-3">
+        <a href="https://github.com/putuwaw/etf-dfa" class="text-white text-decoration-none">Source Code:
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path 
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+                    1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 
+                    0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 
+                    3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            Kelompok 5
+        </a>
+    </div>
+</footer>
+<!-- Akhir Footer -->
 {% endblock %}

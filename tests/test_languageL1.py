@@ -1,5 +1,6 @@
 from modules import languageL1
 
+
 def test_language_1():
     assert languageL1.get_is_accepted("0") == True
     assert languageL1.get_is_accepted("1") == True
@@ -31,3 +32,99 @@ def test_language_1():
     assert languageL1.get_is_accepted("1101") == True
     assert languageL1.get_is_accepted("1110") == False
     assert languageL1.get_is_accepted("1111") == True
+    assert languageL1.get_is_accepted("00000") == True
+    assert languageL1.get_is_accepted("00001") == False
+    assert languageL1.get_is_accepted("00010") == True
+    assert languageL1.get_is_accepted("00011") == False
+    assert languageL1.get_is_accepted("00100") == True
+    assert languageL1.get_is_accepted("00101") == False
+    assert languageL1.get_is_accepted("00110") == True
+    assert languageL1.get_is_accepted("00111") == False
+    assert languageL1.get_is_accepted("01000") == True
+    assert languageL1.get_is_accepted("01001") == False
+    assert languageL1.get_is_accepted("01010") == True
+    assert languageL1.get_is_accepted("01011") == False
+    assert languageL1.get_is_accepted("01100") == True
+    assert languageL1.get_is_accepted("01101") == False
+    assert languageL1.get_is_accepted("01110") == True
+    assert languageL1.get_is_accepted("01111") == False
+    assert languageL1.get_is_accepted("10000") == False
+    assert languageL1.get_is_accepted("10001") == True
+    assert languageL1.get_is_accepted("10010") == False
+    assert languageL1.get_is_accepted("10011") == True
+    assert languageL1.get_is_accepted("10100") == False
+    assert languageL1.get_is_accepted("10101") == True
+    assert languageL1.get_is_accepted("10110") == False
+    assert languageL1.get_is_accepted("10111") == True
+    assert languageL1.get_is_accepted("11000") == False
+    assert languageL1.get_is_accepted("11001") == True
+    assert languageL1.get_is_accepted("11010") == False
+    assert languageL1.get_is_accepted("11011") == True
+    assert languageL1.get_is_accepted("11100") == False
+    assert languageL1.get_is_accepted("11101") == True
+    assert languageL1.get_is_accepted("11110") == False
+    assert languageL1.get_is_accepted("11111") == True
+    assert languageL1.get_is_accepted("000000") == True
+    assert languageL1.get_is_accepted("000001") == False
+    assert languageL1.get_is_accepted("000010") == True
+    assert languageL1.get_is_accepted("000011") == False
+    assert languageL1.get_is_accepted("000100") == True
+    assert languageL1.get_is_accepted("000101") == False
+    assert languageL1.get_is_accepted("000110") == True
+    assert languageL1.get_is_accepted("000111") == False
+    assert languageL1.get_is_accepted("001000") == True
+    assert languageL1.get_is_accepted("001001") == False
+    assert languageL1.get_is_accepted("001010") == True
+    assert languageL1.get_is_accepted("001011") == False
+    assert languageL1.get_is_accepted("001100") == True
+    assert languageL1.get_is_accepted("001101") == False
+    assert languageL1.get_is_accepted("001110") == True
+    assert languageL1.get_is_accepted("001111") == False
+    assert languageL1.get_is_accepted("010000") == True
+    assert languageL1.get_is_accepted("010001") == False
+    assert languageL1.get_is_accepted("010010") == True
+    assert languageL1.get_is_accepted("010011") == False
+    assert languageL1.get_is_accepted("010100") == True
+    assert languageL1.get_is_accepted("010101") == False
+    assert languageL1.get_is_accepted("010110") == True
+    assert languageL1.get_is_accepted("010111") == False
+    assert languageL1.get_is_accepted("011000") == True
+    assert languageL1.get_is_accepted("011001") == False
+    assert languageL1.get_is_accepted("011010") == True
+    assert languageL1.get_is_accepted("011011") == False
+    assert languageL1.get_is_accepted("011100") == True
+    assert languageL1.get_is_accepted("011101") == False
+    assert languageL1.get_is_accepted("011110") == True
+    assert languageL1.get_is_accepted("011111") == False
+    assert languageL1.get_is_accepted("100000") == False
+    assert languageL1.get_is_accepted("100001") == True
+    assert languageL1.get_is_accepted("100010") == False
+    assert languageL1.get_is_accepted("100011") == True
+    assert languageL1.get_is_accepted("100100") == False
+    assert languageL1.get_is_accepted("100101") == True
+    assert languageL1.get_is_accepted("100110") == False
+    assert languageL1.get_is_accepted("100111") == True
+    assert languageL1.get_is_accepted("101000") == False
+    assert languageL1.get_is_accepted("101001") == True
+    assert languageL1.get_is_accepted("101010") == False
+    assert languageL1.get_is_accepted("101011") == True
+    assert languageL1.get_is_accepted("101100") == False
+    assert languageL1.get_is_accepted("101101") == True
+    assert languageL1.get_is_accepted("101110") == False
+    assert languageL1.get_is_accepted("101111") == True
+    assert languageL1.get_is_accepted("110000") == False
+    assert languageL1.get_is_accepted("110001") == True
+    assert languageL1.get_is_accepted("110010") == False
+    assert languageL1.get_is_accepted("110011") == True
+    assert languageL1.get_is_accepted("110100") == False
+    assert languageL1.get_is_accepted("110101") == True
+    assert languageL1.get_is_accepted("110110") == False
+    assert languageL1.get_is_accepted("110111") == True
+    assert languageL1.get_is_accepted("111000") == False
+    assert languageL1.get_is_accepted("111001") == True
+    assert languageL1.get_is_accepted("111010") == False
+    assert languageL1.get_is_accepted("111011") == True
+    assert languageL1.get_is_accepted("111100") == False
+    assert languageL1.get_is_accepted("111101") == True
+    assert languageL1.get_is_accepted("111110") == False
+    assert languageL1.get_is_accepted("111111") == True
