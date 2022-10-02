@@ -11,52 +11,52 @@ PROCESS_SAVER = []
 # Fungsi transisi
 # Didapatkan dari diagram transisi
 def delta(state, value):
-    if (state == "\u2080" and value == "0"):
-        return "\u2083"
-    elif (state == "\u2080" and value == "1"):
-        return "\u2081"
-    elif (state == "\u2081" and value == "0"):
-        return "\u2082"
-    elif (state == "\u2081" and value == "1"):
-        return "\u2081"
-    elif (state == "\u2082" and value == "0"):
-        return "\u2082"
-    elif (state == "\u2082" and value == "1"):
-        return "\u2081"
-    elif (state == "\u2083" and value == "0"):
-        return "\u2083"
-    elif (state == "\u2083" and value == "1"):
-        return "\u2084"
-    elif (state == "\u2084" and value == "0"):
-        return "\u2083"
-    elif (state == "\u2084" and value == "1"):
-        return "\u2084"
+    if (state == "q\u2080" and value == "0"):
+        return "q\u2083"
+    elif (state == "q\u2080" and value == "1"):
+        return "q\u2081"
+    elif (state == "q\u2081" and value == "0"):
+        return "q\u2082"
+    elif (state == "q\u2081" and value == "1"):
+        return "q\u2081"
+    elif (state == "q\u2082" and value == "0"):
+        return "q\u2082"
+    elif (state == "q\u2082" and value == "1"):
+        return "q\u2081"
+    elif (state == "q\u2083" and value == "0"):
+        return "q\u2083"
+    elif (state == "q\u2083" and value == "1"):
+        return "q\u2084"
+    elif (state == "q\u2084" and value == "0"):
+        return "q\u2083"
+    elif (state == "q\u2084" and value == "1"):
+        return "q\u2084"
 
 # Fungs pembantu untuk mendapatkan detail proses
 # Dibuat untuk menyimpan string hasil proses..
 # .. setelah fungsi delta_top() mencapai akhir
 def helper_get_detail_process(str, new):
-    if len(str) > 3:
-        if "\u03B4(\u2080, 0)" in str:
-            new = str.replace("\u03B4(\u2080, 0)", "\u2083")
-        elif "\u03B4(\u2080, 1)" in str:
-            new = str.replace("\u03B4(\u2080, 1)", "\u2081")
-        elif "\u03B4(\u2081, 0)" in str:
-            new = str.replace("\u03B4(\u2081, 0)", "\u2082")
-        elif "\u03B4(\u2081, 1)" in str:
-            new = str.replace("\u03B4(\u2081, 1)", "\u2081")
-        elif "\u03B4(\u2082, 0)" in str:
-            new = str.replace("\u03B4(\u2082, 0)", "\u2082")
-        elif "\u03B4(\u2082, 1)" in str:
-            new = str.replace("\u03B4(\u2082, 1)", "\u2081")
-        elif "\u03B4(\u2083, 0)" in str:
-            new = str.replace("\u03B4(\u2083, 0)", "\u2083")
-        elif "\u03B4(\u2083, 1)" in str:
-            new = str.replace("\u03B4(\u2083, 1)", "\u2084")
-        elif "\u03B4(\u2084, 0)" in str:
-            new = str.replace("\u03B4(\u2084, 0)", "\u2083")
-        elif "\u03B4(\u2084, 1)" in str:
-            new = str.replace("\u03B4(\u2084, 1)", "\u2084")
+    if len(str) > 2:
+        if "\u03B4(q\u2080, 0)" in str:
+            new = str.replace("\u03B4(q\u2080, 0)", "q\u2083")
+        elif "\u03B4(q\u2080, 1)" in str:
+            new = str.replace("\u03B4(q\u2080, 1)", "q\u2081")
+        elif "\u03B4(q\u2081, 0)" in str:
+            new = str.replace("\u03B4(q\u2081, 0)", "q\u2082")
+        elif "\u03B4(q\u2081, 1)" in str:
+            new = str.replace("\u03B4(q\u2081, 1)", "q\u2081")
+        elif "\u03B4(q\u2082, 0)" in str:
+            new = str.replace("\u03B4(q\u2082, 0)", "q\u2082")
+        elif "\u03B4(q\u2082, 1)" in str:
+            new = str.replace("\u03B4(q\u2082, 1)", "q\u2081")
+        elif "\u03B4(q\u2083, 0)" in str:
+            new = str.replace("\u03B4(q\u2083, 0)", "q\u2083")
+        elif "\u03B4(q\u2083, 1)" in str:
+            new = str.replace("\u03B4(q\u2083, 1)", "q\u2084")
+        elif "\u03B4(q\u2084, 0)" in str:
+            new = str.replace("\u03B4(q\u2084, 0)", "q\u2083")
+        elif "\u03B4(q\u2084, 1)" in str:
+            new = str.replace("\u03B4(q\u2084, 1)", "q\u2084")
         PROCESS_SAVER.append(new)
         helper_get_detail_process(new, "")
 
@@ -68,7 +68,7 @@ def delta_top(state, value, prev):
         return "0"
     elif len(value) == 1 and value == "\u03B5":
         PROCESS_SAVER.append(prev)
-        new = prev.replace("\u0394(\u2080, \u03B5)", state)
+        new = prev.replace("\u0394(q\u2080, \u03B5)", state)
         PROCESS_SAVER.append(new)
         helper_get_detail_process(new, "")
         return state
@@ -84,8 +84,8 @@ def delta_top(state, value, prev):
 
 # Fungsi untuk mengecek apakah string diterima atau tidak
 def get_is_accepted(str):
-    isAccepted = delta_top("\u2080", str, "\u0394(\u2080, " + str + ")")
-    if isAccepted == "\u2081" or isAccepted == "\u2083":
+    isAccepted = delta_top("q\u2080", str, "\u0394(q\u2080, " + str + ")")
+    if isAccepted == "q\u2081" or isAccepted == "q\u2083":
         return True
     else:
         return False
@@ -93,5 +93,5 @@ def get_is_accepted(str):
 # Fungsi untuk mendapatkan detail dari proses pengecekan
 def get_detail_process(str):
     PROCESS_SAVER.clear()
-    delta_top("\u2080", str, "\u0394(\u2080, " + str + ")")
+    delta_top("q\u2080", str, "\u0394(q\u2080, " + str + ")")
     return PROCESS_SAVER
