@@ -115,7 +115,7 @@
             <div class="row justify-content-center fs-5 w-200">
                 <div class="col-md-8">
                     <p id="desc" class="lead text-center">ETF-DFA adalah sebuah aplikasi berbasis website yang mengimplementasikan
-                        DFA (Deterministic Finite Automata) dengan ETF (Extension of the Transition Function), sehingga
+                        DFA (Deterministic Finite Automata) dengan ETF (Extended Transition Function), sehingga
                         mampu untuk mengenali apakah sebuah string diterima atau tidak.
                         Aplikasi ini dibuat untuk memenuhi tugas mata kuliah Teori Bahasa & Otomata. Pembuatan aplikasi ini menggunakan
                         Python sebagai bahasa pemrograman utama, Flask sebagai web framewok, Bootstrap CSS, dan Heroku sebagai web hosting.</p>
@@ -163,19 +163,19 @@
             {% endif %}
             <h5 class=" mt-3">Masukan: <span class="lead"> {{string}} </span> </h5>
             {% if language == "L1" %}
-                <h5 class=""> Bahasa: <span class="lead">L1</span> </h5>
+                <h5 class="">Bahasa: <span class="lead">L1</span> </h5>
                 <h5 class="">Diagram Transisi DFA untuk L1:</h5>
                 <img class="img-fluid" src="{{ url_for('static', filename='images/languageL1.png') }}"
                 alt="Transition Diagram for Language L1">
             {% endif %}
             {% if language == "L2" %}
-                <h5 class=""> Bahasa: <span class="lead">L2</span> </h5>
+                <h5 class="">Bahasa: <span class="lead">L2</span> </h5>
                 <h5 class="">Diagram Transisi DFA untuk L2:</h5>
                 <img class="img-fluid" src="{{ url_for('static', filename='images/languageL2.png') }}"
                 alt="Transition Diagram for Language L2">
             {% endif %}
             {% if language == "L3" %}
-                <h5 class=""> Bahasa: <span class="lead">L3</span> </h5>
+                <h5 class="">Bahasa: <span class="lead">L3</span> </h5>
                 <h5 class="">Diagram Transisi DFA untuk L3:</h5>
                 <img class="img-fluid" src="{{ url_for('static', filename='images/languageL3.png') }}"
                     alt="Transition Diagram for Language L3">
