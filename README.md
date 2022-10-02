@@ -9,7 +9,7 @@
 ![Contributors](https://img.shields.io/github/contributors/putuwaw/etf-dfa?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/putuwaw/etf-dfa?style=for-the-badge)
 
-ETF-DFA is a website based string checker using Extension of the Transition Function for Deterministic Finite Automata.
+ETF-DFA is a website based string checker using Extended Transition Function for Deterministic Finite Automata.
 
 ## Features💡
 By using ETF-DFA you can:
@@ -31,6 +31,7 @@ Python as the main programming language.
 ```
 ETF-DFA
 ├── .github
+├── docs
 ├── handlers
 ├── modules
 ├── static
@@ -47,6 +48,7 @@ ETF-DFA
 └── requirements.txt
 ```
 - [.github](.github/) is a folder that used to place Github related stuff, like PR template and CI pipeline.
+- [docs](docs/) contain documentation of this app.
 - [handlers](handlers/) contain handler to handling HTTP request methods, especially POST method.
 - [modules](modules/) contain the main modules for each language.
 - [static](static/) contain static files like images, CSS, and JavaScript files.
@@ -69,7 +71,7 @@ ETF-DFA
 git clone https://github.com/putuwaw/etf-dfa.git
 ```
 - Create a virtual environment:
-```py
+```
 python -m venv venv
 ```
 - Activate virtual environment:
@@ -96,6 +98,6 @@ pytest
     <td align="center"><a href="https://github.com/putuwaw"><img src="https://avatars.githubusercontent.com/u/90038606?v=4" width="150px;" alt=""/><br><sub><b>Putu Widyantara</b></sub></td> 
     <td align="center"><a href="https://github.com/KEVINMOSESWALELENG"><img src="https://avatars.githubusercontent.com/u/103045275?v=4" width="150px;" alt=""/><br><sub><b>Kevin Moses</b></sub></td> 
     <td align="center"><a href="https://github.com/Antoniusata12"><img src="https://avatars.githubusercontent.com/u/113809833?v=4" width="150px;" alt=""/><br><sub><b>Antonius Ata</b></sub></td>
-    <td align="center"><a href="https://github.com/YogaLaksana"><img src="https://avatars.githubusercontent.com/u/103047470?v=4" width="150px;" alt=""/><br><sub><b>Antonius Ata</b></sub></td>
+    <td align="center"><a href="https://github.com/YogaLaksana"><img src="https://avatars.githubusercontent.com/u/103047470?v=4" width="150px;" alt=""/><br><sub><b>Yoga Laksana</b></sub></td>
   </tr>
 </table>
